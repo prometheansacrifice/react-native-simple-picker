@@ -103,7 +103,7 @@ class SimplePicker extends Component {
 		) {
 			const previousOption = this.state.selectedOption;
 			this.setState({
-				selectedOption: props.options[0],
+				selectedOption: props.options[props.initialOptionIndex || 0],
 			}, () => {
 				// Options array changed and the previously selected option is not present anymore.
 				// Should call onSubmit function to tell parent to handle the change too.
